@@ -1,9 +1,9 @@
 # CSGOConfig
  My CS:GO configuration.
- It is designed for a HD 144hz screen by default.
+ It is designed for a 1920x1080 144hz screen by default.
 
 ## Launch options
  ```-novid -console -no-browser -language bananagaming -tickrate 128 +exec autoexec```
 
 ## How to install
- Change binds.cfg to your likings then run ```install.bat```
+ Make your changes to usercfg.cfg and then run ```install.bat```
