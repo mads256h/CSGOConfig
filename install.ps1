@@ -6,7 +6,7 @@ if (!(Test-Path $csgoPath)){
 
 if (-Not (Test-Path .\temp\))
 {
-     md -path .\temp\
+     mkdir -path .\temp\
 }
 
 Copy-Item .\csgo\* .\temp\ -Force -Recurse
@@ -32,8 +32,8 @@ foreach ($line in [System.IO.File]::ReadLines(".\usercfg.cfg"))
     $dictionary.Add($split1, $split2)
 
     $string = "Substituting @@" + $split1 + "@@ with " + $split2
-    
-    Write-Host $string
+
+    Write-Output $string
 }
 
 
@@ -51,4 +51,4 @@ Copy-Item .\temp\* $csgoPath -Force -Recurse
 
 Remove-Item -Path .\temp\ -Recurse -Force
 
-Write-Host "Installation succeeded"
+Write-Output "Installation succeeded"
